@@ -20,7 +20,8 @@ def main(page: ft.Page):
     page.spacing = 0
     page.scroll = None
     page.theme_mode = ft.ThemeMode.DARK
-    set_window_size(page, 1200, 800)
+    if not page.web:
+        set_window_size(page, 1200, 800)
 
     content_area = ft.Container(expand=True)
     state = {"section": "home"}
