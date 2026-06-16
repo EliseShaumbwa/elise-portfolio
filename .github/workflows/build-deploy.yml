@@ -20,7 +20,7 @@ jobs:
         run: pip install flet==0.84.0
 
       - name: Build web app
-        run: flet build web --base-url ${{ github.event.repository.name }} --route-url-strategy hash
+       run: echo "y" | flet build web --base-url ${{ github.event.repository.name }} --route-url-strategy hash
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
